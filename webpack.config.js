@@ -65,7 +65,7 @@ const config = {
       // NOTE ExtractTextPlugin will create a separate bundle for our CSS instead of bundling with JS
       {
         test: /\.s?css$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [

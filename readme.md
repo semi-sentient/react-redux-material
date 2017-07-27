@@ -3,46 +3,27 @@
 ## Dev Stack
 
 1. JavaScript
-    * React *(react, react-router)*
-        * https://facebook.github.io/react/
-        * https://github.com/reacttraining/react-router
-    * Redux *(redux, react-redux, react-router-redux, redux-thunk)*
-        * http://redux.js.org/
-        * https://github.com/reactjs/react-redux
-        * https://github.com/reactjs/react-router-redux
-        * https://github.com/gaearon/redux-thunk
-    * Immutable *(implements persistent data structures)*
-        * https://facebook.github.io/immutable-js/
-    * Highcharts *(highcharts, react-highcharts)*
-        * http://api.highcharts.com/highcharts
-        * https://github.com/kirjs/react-highcharts
-    * Material-UI *(UI component framework for React)*
-        * http://www.material-ui.com/#/
-    * Axios *(Promise based HTTP client for the browser)*
-        * https://github.com/mzabriskie/axios
-    * Moment *(lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates)*
-        * https://momentjs.com/
+    * [React](https://facebook.github.io/react/)
+    * [React Router](https://github.com/reacttraining/react-router) *(for handling UI routing in SPA)*
+    * [Redux](http://redux.js.org/) *(+middleware [react-redux](https://github.com/reactjs/react-redux), [react-router-redux](https://github.com/reactjs/react-router-redux), [redux-thunk](https://github.com/gaearon/redux-thunk))*
+    * [Material-UI](http://www.material-ui.com/#/)
+    * [Highcharts](http://api.highcharts.com/highcharts) *(via [react-highcharts](https://github.com/kirjs/react-highcharts))*
+    * [Immutable](https://facebook.github.io/immutable-js/) *(implements persistent data structures)*
+    * [Axios](https://github.com/mzabriskie/axios) *(Promise based HTTP client for the browser)*
+    * [Moment](https://momentjs.com/) *(lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates)*
 2. CSS
-    * SASS *(CSS preprocessor)*
-        * http://sass-lang.com/guide
+    * [normalize.css](https://necolas.github.io/normalize.css/)
+    * [SASS](http://sass-lang.com/guide) *(CSS preprocessor)*
 
 ## Test Stack
 
-1. Mocha *(test runner)*
-    * https://mochajs.org/
-2. Chai + Chai As Promised *(assertion library)*
-    * http://chaijs.com/
-    * https://github.com/domenic/chai-as-promised
-3. Sinon *(mock/stub library)*
-    * http://sinonjs.org/
-4. JSDOM *(JS-based headless browser)*
-    * https://github.com/tmpvar/jsdom
-5. Enzyme *(wrapper for React testing utility)*
-    * https://github.com/airbnb/enzyme
-6. Redux Mock Store *(redux-mock-store, for testing redux async action creators and middleware)*
-    * https://github.com/arnaudbenard/redux-mock-store
-7. Instanbul *(nicely formatted code coverage reports)*
-    * https://github.com/gotwarlost/istanbul
+1. [Mocha](https://mochajs.org/) *(test runner)*
+2. [Chai](http://chaijs.com/) + [Chai As Promised](https://github.com/domenic/chai-as-promised) *(assertion library)*
+3. [Sinon](http://sinonjs.org/) *(mock/stub library)*
+4. [JSDOM](https://github.com/tmpvar/jsdom) *(JS-based headless browser)*
+5. [Enzyme](https://github.com/airbnb/enzyme) *(wrapper for React testing utility)*
+6. [Redux Mock Store](https://github.com/arnaudbenard/redux-mock-store) *(redux-mock-store, for testing redux async action creators and middleware)*
+7. [Instanbul](https://github.com/gotwarlost/istanbul) *(nicely formatted code coverage reports)*
 
 > **NOTE** that the **test.config.js** file contains the initialization of the headless browser (JSDOM). Additionally, there is no need to import anything into specs except for the component being tested as **test.config.js** imports all necessary dependencies *(i.e. React, chai, etc)*.
 
