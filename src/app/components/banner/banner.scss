@@ -1,0 +1,14 @@
+$padding: 33px;
+$title-height: 48px;
+
+#banner {
+  .header-area {
+    padding-bottom: $padding;
+    padding-top: $padding;
+  }
+
+  .title {
+    font-size: 32px;
+    height: $title-height;
+  }
+}

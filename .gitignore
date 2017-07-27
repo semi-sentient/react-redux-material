@@ -1,0 +1,12 @@
+# Created by https://www.gitignore.io
+
+### Node ###
+# Dependency directory
+node_modules
+npm-debug.log
+
+### App ###
+# Build
+dist
+# Code coverage reports
+coverage

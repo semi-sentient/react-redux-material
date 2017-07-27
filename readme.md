@@ -1,4 +1,4 @@
-# React/Redux/Material-UI Boilerplate Project
+# React, Redux, Material-UI Boilerplate Project
 
 ## Dev Stack
 
@@ -13,6 +13,9 @@
         * https://github.com/gaearon/redux-thunk
     * Immutable *(implements persistent data structures)*
         * https://facebook.github.io/immutable-js/
+    * Highcharts *(highcharts, react-highcharts)*
+        * http://api.highcharts.com/highcharts
+        * https://github.com/kirjs/react-highcharts
     * Material-UI *(UI component framework for React)*
         * http://www.material-ui.com/#/
     * Axios *(Promise based HTTP client for the browser)*
@@ -41,13 +44,15 @@
 7. Instanbul *(nicely formatted code coverage reports)*
     * https://github.com/gotwarlost/istanbul
 
-> **NOTE** that the root directory contains a file named test.config.js that sets up the headless browser (JSDOM) and some globals so that there is no need to import anything into specs except for the component being tested.
+> **NOTE** that the **test** directory contains two files: **dom.js** *(headless browser)* and **helpers.js**. There is no need to import anything into specs except for the component being tested as **helpers.js** imports all necessary dependencies *(i.e. React, chai, etc)*.
 
 ## Prerequisites
 
 Node is required to build the project, run unit tests, etc., so ensure that you have the latest installed. This project was built with Node **v6.9.5** on Mac and tested successfully with **v4.5.0** on Windows. I make no guarantees about other environments, so shoot for having Node **4.5.0** at a minimum.
 
 ## Getting Started
+
+> **NOTE** Visual Studio will typically restore missing npm modules automatically, so you may not need to execute the `npm install --production=false` command if this project resides in a Visual Studio project.
 
 > **NOTE** All commands below should be executed from the root of project directory *(where package.json resides)*.
 
@@ -143,3 +148,16 @@ Given that this project provides a full FE stack to build a large scale applicat
     * https://egghead.io/courses/building-react-applications-with-idiomatic-redux
     * https://learnredux.com/
     * https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md
+
+
+## TODO
+
+1. Update packages
+2. Strategy for dynamic routing *(add routes at the feature level instead of a global route file)*?
+3. Enable Hot Module Replacement *(HMR)* working. Read more here: https://github.com/reactjs/react-router-redux/issues/179
+4. Consider minifying HTML via **html-webpack-plugin**.
+5. Update specs to provide full coverage:
+    * Header.spec.js
+    * Footer.spec.js
+    * LocalStorage.spec.js
+    * Root.spec.js

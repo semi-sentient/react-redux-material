@@ -98,9 +98,6 @@ const config = {
       inject: 'body'
     }),
 
-    // Filter out moment.js locales if not needed (significantly reduces file size by 100k in final bundle)
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
-
     // Will allow us to access IS_PRODUCTION directly in source code
     new webpack.DefinePlugin({
       IS_PRODUCTION: process.env.NODE_ENV === 'production'
@@ -116,7 +113,6 @@ const config = {
     })
   ],
 
-  // Allows us to use absolute paths when importing files
   resolve: {
     modules: [
       paths.node,
