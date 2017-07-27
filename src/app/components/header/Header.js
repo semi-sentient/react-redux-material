@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexLink, Link } from 'react-router';
+import NavLink from './NavLink';
 
 /**
 * @desc Header component renders a header with site navigation.
@@ -9,9 +9,7 @@ import { IndexLink, Link } from 'react-router';
 const Header = () => (
   <header id="header">
     <nav id="nav">
-      <IndexLink to="/">
-        Home
-      </IndexLink>
+      <NavLink to="/home" title="Home" />
     </nav>
   </header>
 );

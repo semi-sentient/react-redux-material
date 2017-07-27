@@ -98,6 +98,9 @@ const config = {
       inject: 'body'
     }),
 
+    // Filter out moment.js locales since we don't use them (significantly reduces file size by 100k final bundle)
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /nb/),
+
     // Will allow us to access IS_PRODUCTION directly in source code
     new webpack.DefinePlugin({
       IS_PRODUCTION: process.env.NODE_ENV === 'production'
