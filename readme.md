@@ -44,7 +44,7 @@
 7. Instanbul *(nicely formatted code coverage reports)*
     * https://github.com/gotwarlost/istanbul
 
-> **NOTE** that the **test** directory contains two files: **dom.js** *(headless browser)* and **helpers.js**. There is no need to import anything into specs except for the component being tested as **helpers.js** imports all necessary dependencies *(i.e. React, chai, etc)*.
+> **NOTE** that the **test.config.js** file contains the initialization of the headless browser (JSDOM). Additionally, there is no need to import anything into specs except for the component being tested as **test.config.js** imports all necessary dependencies *(i.e. React, chai, etc)*.
 
 ## Prerequisites
 
@@ -91,8 +91,7 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
         - api/ ...
         - components/ ...
         - images/ ...
-        - App.js (app layout)
-        - Layout.js (layout wrapper)
+        - Layout.js (app layout -- header, footer, main, etc)
         - Root.js (routing, provider config)
         - Store.js (store config)
       - pages/
