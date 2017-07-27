@@ -4,6 +4,20 @@ import { Link } from 'react-router';
 
 require('./nav.scss');
 
+/**
+ * @desc Header component renders a header with site navigation.
+ * 
+ * @example <NavLink title="Contact Us" to="/contact-us" onClick={(e) => console.log('contact us link clicked', e)} />
+ * @example <NavLink title="Google Search" href="//google.com" target="_blank" />
+ * 
+ * @param {String} href             Used to link to a URL not controlled by react router (e.g. href="https://mysite.com")
+ * @param {Boolean} isDisabled      true to add a ".disabled" class
+ * @param {Function} onClick        Callback when a link is clicked
+ * @param {String} target           Used in conjunction with href to specify the target (e.g. target="_blank")
+ * @param {String} title            The link title (e.g. title="Contact Us")
+ * @param {String} to               Route handled by react router (e.g. to="/contact-us")
+ * @return {JSX}
+ */
 const NavLink = ({
   href,
   isDisabled,
