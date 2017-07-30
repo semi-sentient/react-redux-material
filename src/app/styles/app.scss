@@ -47,10 +47,15 @@ header, footer {
 }
 
 header {
-  padding: 10px;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin: 0 1em 0 0;
+  }
 }
 
-footer {
+header, footer {
   padding: 0px 10px;
 }
 

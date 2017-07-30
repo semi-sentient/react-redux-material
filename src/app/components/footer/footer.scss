@@ -1,8 +1,10 @@
-$footer-height: 40px;
+$footer-height: 30px;
 
 #footer {
   height: $footer-height;
   line-height: $footer-height;
+
+  font-size: 0.8em;
 
   .container {
     padding-top: 0;

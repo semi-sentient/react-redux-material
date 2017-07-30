@@ -16,11 +16,11 @@ const Footer = () => (
 
       <div id="legal">
         <a
-          href="//google.com"
+          href="https://github.com/semi-sentient/react-redux-material"
           rel="noopener noreferrer"
           target="_blank"
         >
-          Link to Google
+          View on GitHub
         </a>
       </div>
     </div>

@@ -8,6 +8,8 @@ import NavLink from './NavLink';
 */
 const Header = () => (
   <header id="header">
+    <h2>Site Name</h2>
+    
     <nav id="nav">
       <NavLink to="/home" title="Home" />
     </nav>
