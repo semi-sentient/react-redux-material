@@ -1,46 +1,76 @@
 @import './utilities';
 
-body, html, #app {
-  margin: 0;
-  padding: 0;
+html, body, #root, #layout {
   height: 100%;
+  margin: 0;
+
+  background: white;
+  font-family: Helvetica;
 }
 
-#site {
+#layout {
   display: flex;
   flex-direction: column;
-  height: 100%; /* 1, 3 */
-}
-
-#header,
-#footer {
-  flex: none; /* 2 */
 }
 
 #main {
-  flex: 1 0 auto; /* 2 */
-  padding: var(--space) var(--space) 0;
-  width: 100%;
-}
-#main::after {
-  content: '\00a0'; /* &nbsp; */
-  display: block;
-  margin-top: var(--space);
-  height: 0px;
-  visibility: hidden;
-}
-@media (--break-lg) {
-  #main {
-    padding-top: var(--space-lg);
+  display: flex;
+  flex: 1;
+
+  main {
+    flex: 1;
   }
-  #main::after {
-    margin-top: var(--space-lg);
+
+  nav, aside {
+    flex: 0 0 12em;
+  }
+
+  nav {
+    order: -1;
   }
 }
 
-#main--full {
-  padding: 0;
+header, footer {
+  background: #232F3E;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+
+  a {
+    color: #ccc;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
 }
-#main--full::after {
-  content: none;
+
+header {
+  padding: 10px;
+}
+
+footer {
+  padding: 0px 10px;
+}
+
+footer a {
+  flex: 1;
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #main > article, #main > nav, #main > aside {
+  /* Return them to document order */
+    order: 0;
+  }
+  
+  #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
 }

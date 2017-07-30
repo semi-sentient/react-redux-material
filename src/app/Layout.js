@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 
+require('normalize.css');
 require('./styles/app.scss');
 
 /**
@@ -16,7 +17,7 @@ const Layout = ({
   children
 }) => (
   <MuiThemeProvider>
-    <div id="site">
+    <div id="layout">
       <Header />
 
       <div id="main">
