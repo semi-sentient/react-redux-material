@@ -1,0 +1,62 @@
+/*
+  Using Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
+*/
+
+@mixin message($background, $icon, $close) {
+  background: $background;
+
+  i {
+    color: $icon;
+  }
+
+  .close {
+    color: $close;
+  }
+}
+
+.message {
+  padding: 8px 12px;
+
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+
+  i, .close {
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  i {
+    margin-right: 8px;
+  }
+
+  .close {
+    margin-top: -12px;
+    padding: 0;
+
+    position: absolute;
+    right: 8px;
+    top: 50%;
+
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  &.info {
+    // @include message(#B3E5FC, #039BE5, #0277BD); // Blue: 100, 600, 800
+    @include message(#CFD8DC, #546E7A, #37474F); // Blue Grey: 100, 600, 800
+  }
+
+  &.success {
+    // @include message(#C8E6C9, #43A047, #2E7D32); // Green: 100, 600, 800
+    @include message(#DCEDC8, #7CB342, #558B2F); // Light Green: 100, 600, 800
+  }
+
+  &.warning {
+    @include message(#FFECB3, #FFB300, #FF8F00); // Amber: 100, 600, 800
+  }
+
+  &.error {
+    @include message(#FFCDD2, #E53935, #C62828); // Red: 100, 600, 800
+  }
+}
