@@ -73,9 +73,9 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
     + src/
       - app/
         - api/ ...
-        - components/ ...
+        - components/ ... (layout, header, footer, etc)
+        - utilities/ ...
         - images/ ...
-        - Layout.js (app layout -- header, footer, main, etc)
         - Root.js (routing, provider config)
         - Store.js (store config)
       - pages/
@@ -86,7 +86,7 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
             - reducers.js
             - reducers.spec.js
             - types.js
-          - components/ ... (child components, preferably dumb)
+          - components/ ... (child components, presentational)
           - home.scss
           - Home.js
           - Home.spec.js

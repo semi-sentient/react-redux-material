@@ -3,7 +3,7 @@ import { routerReducer, syncHistoryWithStore } from 'react-router-redux';
 import { applyMiddleware, combineReducers, createStore, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import { loadState } from './LocalStorage';
+import { loadState } from './utilities/localStorage/LocalStorage';
 
 // Combine all store reducers.
 const storeReducers = combineReducers({

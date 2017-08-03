@@ -1,8 +1,8 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
+import Footer from './footer/Footer';
+import Header from './header/Header';
 
 import 'normalize.css';
 import './layout.scss';

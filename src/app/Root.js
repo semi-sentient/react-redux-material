@@ -4,12 +4,13 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
+import Layout from './components/layout/Layout';
+
 import Welcome from 'pages/welcome/Welcome';
 import Forms from 'pages/forms/Forms';
 import AccessDenied from 'pages/errors/AccessDenied';
 import BrowserUpgrade from 'pages/errors/BrowserUpgrade';
 import Oops from 'pages/errors/Oops';
-import Layout from './Layout';
 
 // This is required for touch/tap events to function properly with Material UI
 injectTapEventPlugin();
