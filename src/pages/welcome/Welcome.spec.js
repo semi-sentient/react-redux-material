@@ -1,11 +1,11 @@
-import Home from './Home';
+import Welcome from './Welcome';
 
-describe('<Home />', () => {
-  const wrapper = shallow(<Home />);
+describe('<Welcome />', () => {
+  const wrapper = shallow(<Welcome />);
 
-  it('should render a <div> with an id of "home"', () => {
+  it('should render a <div> with an id of "welcome"', () => {
     expect(wrapper.type()).to.equal('div');
-    expect(wrapper.props().id).to.equal('home');
+    expect(wrapper.props().id).to.equal('welcome');
   });
 
   it('should render a single <Banner> component', () => {

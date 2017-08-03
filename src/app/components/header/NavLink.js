@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
-require('./nav.scss');
+import './navLink.scss';
 
 /**
  * @desc Header component renders a header with site navigation.
- * 
+ *
  * @example <NavLink title="Contact Us" to="/contact-us" onClick={(e) => console.log('contact us link clicked', e)} />
  * @example <NavLink title="Google Search" href="//google.com" target="_blank" />
- * 
+ *
  * @param {String} href             Used to link to a URL not controlled by react router (e.g. href="https://mysite.com")
  * @param {Boolean} isDisabled      true to add a ".disabled" class
  * @param {Function} onClick        Callback when a link is clicked
@@ -26,9 +26,16 @@ const NavLink = ({
   title,
   to
 }, context) => {
+  let className;
+
   const baseClass = 'nav-item';
   const location = context && context.router ? context.router.getCurrentLocation().pathname : '';
-  const className = location.includes(to) ? `${baseClass} active-nav` : baseClass;
+
+  if (to.length > 1) {
+    className = location.includes(to) ? `${baseClass} active-nav` : baseClass;
+  } else {
+    className = to === location ? `${baseClass} active-nav` : baseClass;
+  }
 
   const commonProps = {
     className: isDisabled ? 'disabled' : '',

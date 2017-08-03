@@ -1,0 +1,17 @@
+@mixin navbar {
+  padding: 0px 10px;
+  
+  background: #232F3E;
+  color: white;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+
+  a {
+    color: #ccc;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}

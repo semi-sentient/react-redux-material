@@ -1,0 +1,12 @@
+@import '../../styles/mixins.scss';
+
+#header {
+  @include navbar;
+
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin: 0 1em 0 0;
+  }
+}

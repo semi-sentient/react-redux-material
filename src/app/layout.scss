@@ -1,0 +1,62 @@
+@import 'styles/utilities';
+
+html, body, #root, #layout, #main {
+  height: 100%;
+  margin: 0;
+
+  background: white;
+  font-family: Helvetica;
+}
+
+#layout {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  .content {
+    display: flex;
+    flex: 1;
+
+    main {
+      flex: 1;
+    }
+
+    nav, aside {
+      flex: 0 0 12em;
+    }
+
+    nav {
+      order: -1;
+    }
+
+    main, nav, aside {
+      padding: 1em;
+    }
+  }
+}
+
+/* Too narrow to support three columns */
+@media all and (max-width: 640px) {
+  #main {
+    .content {
+      flex-direction: column;
+    }
+
+    .content > article,
+    .content > nav,
+    .content > aside {
+      /* Return them to document order */
+      order: 0;
+    }
+
+    .content > article,
+    .content > nav,
+    .content > aside,
+    header,
+    footer {
+      min-height: 50px;
+      max-height: 50px;
+    }
+  }
+}

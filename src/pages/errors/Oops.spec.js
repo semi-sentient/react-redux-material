@@ -8,10 +8,6 @@ describe('<Oops />', () => {
     expect(wrapper.props().id).to.equal('errors');
   });
 
-  it('should render a single <Banner> component', () => {
-    expect(wrapper.find('Banner').length).to.equal(1);
-  });
-
   it('should render a single <a> element that goes back to the previous page', () => {
     const link = wrapper.find('a[href="/"]');
 

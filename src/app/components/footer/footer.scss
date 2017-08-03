@@ -1,21 +1,28 @@
+@import '../../styles/mixins.scss';
+
 $footer-height: 30px;
 
 #footer {
+  @include navbar;
+
   height: $footer-height;
   line-height: $footer-height;
-
   font-size: 0.8em;
+
+  a {
+    flex: 1;
+  }
 
   .container {
     padding-top: 0;
     display: flex;
   }
 
-  #copyright {
+  .copyright {
     flex: 1 0 0;
   }
 
-  #legal {
+  .legal {
     flex: 1 0 0;
     text-align: right;
   }

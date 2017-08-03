@@ -4,11 +4,11 @@ import { Router, Route, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import Home from 'pages/home/Home';
+import Welcome from 'pages/welcome/Welcome';
+import Forms from 'pages/forms/Forms';
 import AccessDenied from 'pages/errors/AccessDenied';
 import BrowserUpgrade from 'pages/errors/BrowserUpgrade';
 import Oops from 'pages/errors/Oops';
-
 import Layout from './Layout';
 
 // This is required for touch/tap events to function properly with Material UI
@@ -46,8 +46,8 @@ const Root = ({
   <Provider store={store}>
     <Router history={configureHistory(history)}>
       <Route path="/" component={Layout}>
-        <IndexRoute component={Home} />
-        <Route path="/home" component={Home} />
+        <IndexRoute component={Welcome} />
+        <Route path="/forms" component={Forms} />
         <Route path="/access-denied" component={AccessDenied} />
         <Route path="/browser-upgrade" component={BrowserUpgrade} />
         <Route path="*" component={Oops} />

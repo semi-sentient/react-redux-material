@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('./footer.scss');
+import './footer.scss';
 
 /**
 * @desc Footer component renders a footer on the page with copyright notices and links to legal info.
@@ -10,11 +10,11 @@ require('./footer.scss');
 const Footer = () => (
   <footer id="footer">
     <div className="container">
-      <div id="copyright">
+      <div className="copyright">
         Copyright &copy; {new Date().getFullYear()}
       </div>
 
-      <div id="legal">
+      <div className="legal">
         <a
           href="https://github.com/semi-sentient/react-redux-material"
           rel="noopener noreferrer"

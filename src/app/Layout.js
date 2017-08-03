@@ -4,8 +4,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 
-require('normalize.css');
-require('./styles/app.scss');
+import 'normalize.css';
+import './layout.scss';
 
 /**
 * @desc Layout component wraps the App component with the MuiThemeProvider component to enable usage of Materia-UI site wide.

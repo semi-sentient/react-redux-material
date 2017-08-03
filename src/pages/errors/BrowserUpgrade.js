@@ -1,15 +1,11 @@
 import React from 'react';
 
-import Banner from 'app/components/banner/Banner';
-
 const BrowserUpgrade = () => (
-  <div id="error">
-    <Banner title="For security reasons, please update your web browser." />
+  <div className="content" id="errors">
+    <main>
+      <h1>For security reasons, please update your web browser.</h1>
 
-    <div className="container">
-      <h3>
-        You are using an unsupported web browser.
-      </h3>
+      <h3>You are using an unsupported web browser.</h3>
 
       <p>
         To give you the safest, fastest, and most secure experience possible we recommend upgrading to {' '}
@@ -35,7 +31,7 @@ const BrowserUpgrade = () => (
           Microsoft Edge
         </a>.
       </p>
-    </div>
+    </main>
   </div>
 );
 

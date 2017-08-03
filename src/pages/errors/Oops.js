@@ -1,18 +1,14 @@
 import React from 'react';
 import { browserHistory, Link } from 'react-router';
 
-import Banner from 'app/components/banner/Banner';
-
 require('./errors.scss');
 
 const Oops = () => (
-  <div id="errors">
-    <Banner title="Oops! Something Happened" />
+  <div className="content" id="errors">
+    <main>
+      <h1>Oops! Something Happened</h1>
 
-    <div className="container">
-      <h3>
-        Sorry, we couldn’t find the information or page you requested. There may have been a system error.
-      </h3>
+      <h3>Sorry, we couldn’t find the information or page you requested. There may have been a system error.</h3>
 
       <p>
         <b>Things to try:</b>
@@ -39,8 +35,8 @@ const Oops = () => (
           Or if you like... just return to the <Link to="/">home page</Link>.
         </li>
       </ul>
-    </div>
-</div>
+    </main>
+  </div>
 );
 
 export default Oops;

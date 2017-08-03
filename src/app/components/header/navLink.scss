@@ -1,0 +1,26 @@
+$active-background-color: #485769;
+
+@mixin highlight {
+    background: $active-background-color;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+#nav {
+  .nav-item {
+    padding: 1em;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        @include highlight;
+    }
+  }
+
+  .active-nav {
+    @include highlight;
+  }
+}

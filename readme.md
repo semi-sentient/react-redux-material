@@ -11,9 +11,12 @@
     * [Immutable](https://facebook.github.io/immutable-js/) *(implements persistent data structures)*
     * [Axios](https://github.com/mzabriskie/axios) *(Promise based HTTP client for the browser)*
     * [Moment](https://momentjs.com/) *(lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates)*
-2. CSS
+2. Styling (CSS, Color Palette, Typography)
     * [normalize.css](https://necolas.github.io/normalize.css/)
     * [SASS](http://sass-lang.com/guide) *(CSS preprocessor)*
+    * Material Design
+        [Color Palette](https://material.io/guidelines/style/color.html)
+        [Typography](https://material.io/guidelines/style/typography.html)
 
 ## Test Stack
 
