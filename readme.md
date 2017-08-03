@@ -15,8 +15,8 @@
     * [normalize.css](https://necolas.github.io/normalize.css/)
     * [SASS](http://sass-lang.com/guide) *(CSS preprocessor)*
     * Material Design
-        [Color Palette](https://material.io/guidelines/style/color.html)
-        [Typography](https://material.io/guidelines/style/typography.html)
+        * [Color Palette](https://material.io/guidelines/style/color.html)
+        * [Typography](https://material.io/guidelines/style/typography.html)
 
 ## Test Stack
 
