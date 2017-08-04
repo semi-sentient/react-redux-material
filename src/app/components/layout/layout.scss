@@ -1,11 +1,14 @@
 @import '../../styles/utilities';
+@import '../../styles/typography';
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 html, body, #root, #layout, #main {
   height: 100%;
   margin: 0;
-
   background: white;
-  font-family: Helvetica;
 }
 
 #layout {
