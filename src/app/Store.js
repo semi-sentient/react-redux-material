@@ -1,5 +1,5 @@
 import { browserHistory } from 'react-router';
-import { routerReducer, syncHistoryWithStore } from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 import { applyMiddleware, combineReducers, createStore, compose } from 'redux';
 import thunk from 'redux-thunk';
 
@@ -44,7 +44,4 @@ const store = createStore(storeReducers, persistedState, storeEnhancers);
 * import { loadState, saveState } from './LocalStorage';
 */
 
-// enable synching state with history (to be passed to router)
-const history = syncHistoryWithStore(browserHistory, store);
-
-export { store, history };
+export { store };

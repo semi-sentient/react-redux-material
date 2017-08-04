@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import './navLink.scss';
 
@@ -27,9 +27,8 @@ const NavLink = ({
   to
 }, context) => {
   let className;
-
   const baseClass = 'nav-item';
-  const location = context && context.router ? context.router.getCurrentLocation().pathname : '';
+  const location = context && context.router ? context.router.route.location.pathname : '';
 
   if (to.length > 1) {
     className = location.includes(to) ? `${baseClass} active-nav` : baseClass;

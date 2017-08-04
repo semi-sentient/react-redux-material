@@ -1,20 +1,22 @@
 // create a fake DOM environment for tests
-import { jsdom } from 'jsdom';
+import { JSDOM } from 'jsdom';
 
-const exposedProps = ['window', 'navigator', 'document'];
+const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
+const { window } = jsdom;
 
-global.document = jsdom('');
+function copyProps(src, target) {
+  const props = Object.getOwnPropertyNames(src)
+    .filter(prop => typeof target[prop] === 'undefined')
+    .map(prop => Object.getOwnPropertyDescriptor(src, prop));
+  Object.defineProperties(target, props);
+}
+
+global.window = window;
+global.document = window.document;
 global.navigator = {
-  userAgent: 'node.js'
+  userAgent: 'node.js',
 };
-global.window = document.defaultView;
-
-Object.keys(document.defaultView).forEach((property) => {
-  if (typeof global[property] === 'undefined') {
-    exposedProps.push(property);
-    global[property] = document.defaultView[property];
-  }
-});
+copyProps(window, global);
 
 // set up globals for testing so that we don't have to import them in every spec
 import React from 'react';

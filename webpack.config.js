@@ -43,7 +43,7 @@ const config = {
       'react',
       'react-dom',
       'react-redux',
-      'react-router',
+      'react-router-dom',
       'react-router-redux',
       'react-tap-event-plugin',
       'redux',

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import Footer from './footer/Footer';
@@ -13,7 +14,31 @@ import './layout.scss';
 * @param {Object} children    Child nodes to render in the main content area
 * @return {JSX}
 */
-const Layout = ({
+class Layout extends Component {
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0);
+    }
+  }
+
+  render() {
+    return (
+      <MuiThemeProvider>
+        <div id="layout">
+          <Header />
+
+          <div id="main">
+            {this.props.children}
+          </div>
+
+          <Footer />
+        </div>
+      </MuiThemeProvider>
+    )
+  }
+}
+
+/*const Layout = ({
   children
 }) => (
   <MuiThemeProvider>
@@ -27,6 +52,6 @@ const Layout = ({
       <Footer />
     </div>
   </MuiThemeProvider>
-);
+);*/
 
-export default Layout;
+export default withRouter(Layout);

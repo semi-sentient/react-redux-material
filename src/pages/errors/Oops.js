@@ -1,18 +1,17 @@
 import React from 'react';
-import { browserHistory, Link } from 'react-router';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 require('./errors.scss');
 
-const Oops = () => (
+const Oops = (props, context) => (
   <div className="content" id="errors">
     <main>
       <h1>Oops! Something Happened</h1>
 
       <h3>Sorry, we couldn’t find the information or page you requested. There may have been a system error.</h3>
 
-      <p>
-        <b>Things to try:</b>
-      </p>
+      <p><strong>Things to try:</strong></p>
 
       <ul>
         <li>
@@ -22,7 +21,7 @@ const Oops = () => (
             href="/"
             onClick={(e) => {
               e.preventDefault();
-              browserHistory.goBack();
+              context.router.history.goBack();
             }}
           >
             previous page
@@ -38,5 +37,9 @@ const Oops = () => (
     </main>
   </div>
 );
+
+Oops.contextTypes = {
+  router: PropTypes.object
+};
 
 export default Oops;
