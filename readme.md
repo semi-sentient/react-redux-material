@@ -111,28 +111,6 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
     }));
     ~~~
 
-## Learn
-
-Given that this project provides a full FE stack to build a large scale application, it's important that you understand each dependency. The following links should be read in order (assuming no prior experience with each technology):
-
-1. ECMAScript 2015 (aka ES6), Webpack, Babel
-    * http://ccoenraets.github.io/es6-tutorial/
-    * https://www.sitepoint.com/beginners-guide-to-webpack-2-and-module-bundling/
-2. React / React Router
-    * https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
-    * https://github.com/reactjs/react-router-tutorial/tree/master/lessons
-    * https://online.reacttraining.com/
-    * http://blog.ricardofilipe.com/post/react-enzyme-tdd-tutorial
-3. Redux
-    * https://gist.github.com/MarcoWorms/30758235f05faec844b8c06ce2e5bac9
-    * https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6#.dwj9rdxhf
-    * https://www.smashingmagazine.com/2016/06/an-introduction-to-redux/
-    * https://egghead.io/courses/getting-started-with-redux
-    * https://egghead.io/courses/building-react-applications-with-idiomatic-redux
-    * https://learnredux.com/
-    * https://github.com/reactjs/redux/blob/master/docs/recipes/WritingTests.md
-
-
 ## TODO
 
 1. Fix unit tests and increase code coverage

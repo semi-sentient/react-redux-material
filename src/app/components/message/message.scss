@@ -2,8 +2,9 @@
   Using Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
 */
 
-@mixin message($background, $icon, $close) {
-  background: $background;
+@mixin messageColors($bg, $icon, $close, $text) {
+  background: $bg;
+  color: $text;
 
   i {
     color: $icon;
@@ -43,20 +44,18 @@
   }
 
   &.info {
-    // @include message(#B3E5FC, #039BE5, #0277BD); // Blue: 100, 600, 800
-    @include message(#CFD8DC, #546E7A, #37474F); // Blue Grey: 100, 600, 800
+    @include messageColors(#CFD8DC, #546E7A, #37474F, #263238); // Blue Grey: 100, 600, 800, 900
   }
 
   &.success {
-    // @include message(#C8E6C9, #43A047, #2E7D32); // Green: 100, 600, 800
-    @include message(#DCEDC8, #7CB342, #558B2F); // Light Green: 100, 600, 800
+    @include messageColors(#DCEDC8, #7CB342, #558B2F, #33691E); // Light Green: 100, 600, 800, 900
   }
 
   &.warning {
-    @include message(#FFECB3, #FFB300, #FF8F00); // Amber: 100, 600, 800
+    @include messageColors(#FFECB3, #FFB300, #FF8F00, #FF6F00); // Amber: 100, 600, 800, 900
   }
 
   &.error {
-    @include message(#FFCDD2, #E53935, #C62828); // Red: 100, 600, 800
+    @include messageColors(#FFCDD2, #E53935, #C62828, #B71C1C); // Red: 100, 600, 800, 900
   }
 }
