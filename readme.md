@@ -135,12 +135,4 @@ Given that this project provides a full FE stack to build a large scale applicat
 
 ## TODO
 
-1. Update packages
-2. Strategy for dynamic routing *(add routes at the feature level instead of a global route file)*?
-3. Enable Hot Module Replacement *(HMR)* working. Read more here: https://github.com/reactjs/react-router-redux/issues/179
-4. Consider minifying HTML via **html-webpack-plugin**.
-5. Update specs to provide full coverage:
-    * Header.spec.js
-    * Footer.spec.js
-    * LocalStorage.spec.js
-    * Root.spec.js
+1. Fix unit tests and increase code coverage
