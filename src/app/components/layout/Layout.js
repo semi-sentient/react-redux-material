@@ -38,20 +38,4 @@ class Layout extends Component {
   }
 }
 
-/*const Layout = ({
-  children
-}) => (
-  <MuiThemeProvider>
-    <div id="layout">
-      <Header />
-
-      <div id="main">
-        {children}
-      </div>
-
-      <Footer />
-    </div>
-  </MuiThemeProvider>
-);*/
-
 export default withRouter(Layout);

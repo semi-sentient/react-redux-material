@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-require('./errors.scss');
+import './errors.scss';
 
 const Oops = (props, context) => (
   <div className="content" id="errors">
