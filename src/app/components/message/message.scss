@@ -1,6 +1,5 @@
-/*
-  Using Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
-*/
+@import '../../styles/colors';
+@import '../../styles/typography';
 
 @mixin messageColors($bg, $icon, $close, $text) {
   background: $bg;
@@ -16,14 +15,15 @@
 }
 
 .message {
+  margin-bottom: 1em;
   padding: 8px 12px;
 
-  font-size: 14px;
+  font-size: $font-size-normal;
   line-height: 24px;
   position: relative;
 
   i, .close {
-    font-size: 24px;
+    font-size: $font-size-huge;
     line-height: 20px;
   }
 
@@ -44,18 +44,18 @@
   }
 
   &.info {
-    @include messageColors(#CFD8DC, #546E7A, #37474F, #263238); // Blue Grey: 100, 600, 800, 900
+    @include messageColors($info-light-color, $info-medium-color, $info-dark-color, $info-darker-color);
   }
 
   &.success {
-    @include messageColors(#DCEDC8, #7CB342, #558B2F, #33691E); // Light Green: 100, 600, 800, 900
+    @include messageColors($success-light-color, $success-medium-color, $success-dark-color, $success-darker-color);
   }
 
   &.warning {
-    @include messageColors(#FFECB3, #FFB300, #FF8F00, #FF6F00); // Amber: 100, 600, 800, 900
+    @include messageColors($warning-light-color, $warning-medium-color, $warning-dark-color, $warning-darker-color);
   }
 
   &.error {
-    @include messageColors(#FFCDD2, #E53935, #C62828, #B71C1C); // Red: 100, 600, 800, 900
+    @include messageColors($error-light-color, $error-medium-color, $error-dark-color, $error-darker-color);
   }
 }

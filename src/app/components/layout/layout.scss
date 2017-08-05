@@ -1,14 +1,11 @@
+@import '../../styles/colors';
 @import '../../styles/utilities';
 @import '../../styles/typography';
-
-body {
-  font-family: 'Roboto', 'Noto Sans', sans-serif;
-}
 
 html, body, #root, #layout, #main {
   height: 100%;
   margin: 0;
-  background: white;
+  background: $primary-container-bg-color;
 }
 
 #layout {
@@ -34,7 +31,7 @@ html, body, #root, #layout, #main {
     }
 
     main, nav, aside {
-      padding: 1em;
+      padding: 1em 0.75em;
     }
   }
 }

@@ -1,10 +1,10 @@
-$active-background-color: #485769;
+@import '../../../styles/colors';
 
 @mixin highlight {
-    background: $active-background-color;
+    background: $secondary-brand-color;
 
     a {
-        color: white;
+        color: $navbar-link-active-color;
         text-decoration: none;
     }
 }

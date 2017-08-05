@@ -1,0 +1,42 @@
+/*
+  Using Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
+*/
+
+// e.g. body background color, cards, etc.
+$primary-container-bg-color: white;
+
+// e.g. asides, cards, etc.
+$secondary-container-bg-color: #ECEFF1; // Blue Grey, 50
+
+// e.g. header/footer colors
+$primary-brand-color: #263238;    // Blue Grey, 900
+$secondary-brand-color: #455A64;  // Blue Grey, 700
+
+// e.g. header/footer links and text
+$navbar-text-color: white;
+$navbar-link-color: #ccc;
+$navbar-link-active-color: white;
+
+// messaging - info (Blue Grey)
+$info-light-color: #CFD8DC;       // 100
+$info-medium-color: #546E7A;      // 600
+$info-dark-color: #37474F;        // 800
+$info-darker-color: #263238;      // 900
+
+// messaging - success (Light Green)
+$success-light-color: #DCEDC8;    // 100
+$success-medium-color: #7CB342;   // 600
+$success-dark-color: #558B2F;     // 800
+$success-darker-color: #33691E;   // 900
+
+// messaging - warning (Amber)
+$warning-light-color: #FFECB3;    // 100
+$warning-medium-color: #FFB300;   // 600
+$warning-dark-color: #FF8F00;     // 800
+$warning-darker-color: #FF6F00;   // 900
+
+// messaging - error (Red)
+$error-light-color: #FFCDD2;      // 100
+$error-medium-color: #E53935;     // 600
+$error-dark-color: #C62828;       // 800
+$error-darker-color: #B71C1C;     // 900

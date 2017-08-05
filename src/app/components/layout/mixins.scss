@@ -1,16 +1,18 @@
+@import '../../styles/colors';
+
 @mixin navbar {
   padding: 0px 10px;
   
-  background: #232F3E;
-  color: white;
+  background: $primary-brand-color;
+  color: $navbar-text-color;
   text-shadow: 2px 2px 0 rgba(0,0,0,.5);
 
   a {
-    color: #ccc;
+    color: $navbar-link-color;
     text-decoration: none;
 
     &:hover {
-      color: white;
+      color: $navbar-link-active-color;
       text-decoration: underline;
     }
   }
