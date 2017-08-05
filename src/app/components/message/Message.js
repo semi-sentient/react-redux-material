@@ -8,11 +8,11 @@ import './message.scss';
 * @example
 *   <Message
 *     isControl={true}
-*     title="Oops"
 *     type="warning"
 *   />
+*     <strong>Uh oh!</strong> Something bad is about to happen, maybe.
+*   </Message>
 * @param {Boolean} isControl    True to enable the "close" button
-* @param {String} title         The message to display in the main content area
 * @param {String} type          The type of message, which corresponds to a CSS class (Luna)
 * @return {JSX}
 */
@@ -24,7 +24,6 @@ class Message extends Component {
 
   static propTypes = {
     isControl: PropTypes.bool,
-    title: PropTypes.string.isRequired,
     type: PropTypes.string
   };
 
@@ -45,7 +44,7 @@ class Message extends Component {
 
   render() {
     const {
-      title,
+      children,
       type,
       isControl
     } = this.props;
@@ -66,7 +65,7 @@ class Message extends Component {
           </div>
         ) : (null)}
 
-        {title}
+        {children}
       </div>
     );
   }
