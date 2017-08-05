@@ -11,11 +11,17 @@ const Welcome = () => (
       <aside>
         <h3>Aside</h3>
 
-
+        <p>TODO: form fields with some basic validation???</p>
       </aside>
 
       <main>
         <h3>Main</h3>
+
+        <p>
+          This project is maintained on{' '}
+          <a href="https://github.com/semi-sentient/react-redux-material" target="_blank">GitHub</a> by{' '}
+          <a href="https://github.com/semi-sentient" target="_blank">Markus Hay</a>.
+        </p>
 
         <Message
           isControl

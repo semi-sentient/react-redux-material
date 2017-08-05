@@ -5,7 +5,7 @@
   
   background: $primary-brand-color;
   color: $navbar-text-color;
-  text-shadow: 2px 2px 0 rgba(0,0,0,.5);
+  text-shadow: 1px 1px 1px $navbar-text-color-shadow;
 
   a {
     color: $navbar-link-color;

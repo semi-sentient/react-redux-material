@@ -1,6 +1,4 @@
-/*
-  Using Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
-*/
+// Uses Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
 
 // e.g. body background color, cards, etc.
 $primary-container-bg-color: white;
@@ -14,8 +12,13 @@ $secondary-brand-color: #455A64;  // Blue Grey, 700
 
 // e.g. header/footer links and text
 $navbar-text-color: white;
+$navbar-text-color-shadow: black;
 $navbar-link-color: #ccc;
 $navbar-link-active-color: white;
+
+// e.g. main, aside, nav links
+$link-color-main: #607D8B;        // Blue Grey, 500
+$link-color-main-shadow: #CFD8DC; // Blue Grey, 100
 
 // messaging - info (Blue Grey)
 $info-light-color: #CFD8DC;       // 100
