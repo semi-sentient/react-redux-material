@@ -22,10 +22,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack -p",
     "start": "cross-env NODE_ENV=dev webpack-dev-server",
-    "test:windows": "cross-env NODE_PATH=./src mocha --compilers js:babel-core/register --require ignore-styles --require ./test.config.js --recursive ./src/**/*.spec.js",
-    "test:windows-coverage": "cross-env NODE_PATH=./src istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ignore-styles --require ./test.config.js --recursive ./src/**/*.spec.js",
-    "test:linux": "NODE_PATH=./src mocha --compilers js:babel-core/register --require ignore-styles --require --require ./test.config.js './{,!(node_modules)/**/}*.spec.js'",
-    "test:linux-coverage": "NODE_PATH=./src istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ignore-styles --require ./test.config.js './{,!(node_modules)/**/}*.spec.js'"
+    "test:windows": "cross-env NODE_PATH=./src mocha --compilers js:babel-core/register --require ignore-styles --require ./test.config.js --recursive ./src/**/*.test.js",
+    "test:windows-coverage": "cross-env NODE_PATH=./src istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ignore-styles --require ./test.config.js --recursive ./src/**/*.test.js",
+    "test:linux": "NODE_PATH=./src mocha --compilers js:babel-core/register --require ignore-styles --require --require ./test.config.js './{,!(node_modules)/**/}*.test.js'",
+    "test:linux-coverage": "NODE_PATH=./src istanbul cover node_modules/mocha/bin/_mocha -- --compilers js:babel-core/register --require ignore-styles --require ./test.config.js './{,!(node_modules)/**/}*.test.js'"
   },
   "dependencies": {
     "axios": "0.16.x",

@@ -3,10 +3,10 @@ import NavLink from './NavLink';
 describe('<NavLink />', () => {
   const context = {
     router: {
-      getCurrentLocation() {
-        return {
+      route: {
+        location: {
           pathname: 'my/test/location'
-        };
+        }
       }
     }
   };
