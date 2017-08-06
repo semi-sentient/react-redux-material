@@ -70,7 +70,7 @@ NavLink.contextTypes = {
 NavLink.defaultProps = {
   href: '',
   isDisabled: false,
-  onClick: () => {},
+  onClick: /* istanbul ignore next */ () => {},
   target: '',
   to: '/'
 };
@@ -78,7 +78,7 @@ NavLink.defaultProps = {
 NavLink.propTypes = {
   href: PropTypes.string,
   isDisabled: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   target: PropTypes.string,
   title: PropTypes.string.isRequired,
   to: PropTypes.string
