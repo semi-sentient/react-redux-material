@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import LinearProgress from 'material-ui/LinearProgress';
 
+import './loading.scss';
+
 /**
  * Wrapper for Material-UI LinearProgress component with custom CSS (class applied).
  * 
@@ -16,7 +18,7 @@ const Loading = ({
   if (isLoading) {
     return (
       <LinearProgress
-        className="material-ui-linear-progress"
+        className="loading-linear-progress"
         mode="indeterminate"
       />
     );
