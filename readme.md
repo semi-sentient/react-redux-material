@@ -114,3 +114,4 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
 ## TODO
 
 1. Fix unit tests and increase code coverage
+2. Build form demo + filtered table
