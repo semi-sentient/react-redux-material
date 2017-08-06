@@ -11,11 +11,6 @@ describe('pages/errors/Oops', () => {
   it('should render a single <a> element that goes back to the previous page', () => {
     const link = wrapper.find('a[href="/"]');
     expect(link.length).to.equal(1);
-
-    // ensures that all branches are tested -- although there is nothing to assert here
-    /*link.simulate('click', {
-      preventDefault() {}
-    });*/
   });
 
   it('should render a <Link> component that points to the home page', () => {

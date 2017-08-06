@@ -28,7 +28,7 @@ const NavLink = ({
 }, context) => {
   let className;
   const baseClass = 'nav-item';
-  const location = context && context.router ? context.router.route.location.pathname : '';
+  const location = context.router.route.location.pathname;
 
   if (to.length > 1) {
     className = location.includes(to) ? `${baseClass} active-nav` : baseClass;
@@ -36,6 +36,7 @@ const NavLink = ({
     className = to === location ? `${baseClass} active-nav` : baseClass;
   }
 
+  /* istanbul ignore next */
   const commonProps = {
     className: isDisabled ? 'disabled' : '',
     onClick: (e) => {
@@ -70,7 +71,8 @@ NavLink.defaultProps = {
   href: '',
   isDisabled: false,
   onClick: () => {},
-  target: ''
+  target: '',
+  to: '/'
 };
 
 NavLink.propTypes = {
@@ -79,7 +81,7 @@ NavLink.propTypes = {
   onClick: PropTypes.func.isRequired,
   target: PropTypes.string,
   title: PropTypes.string.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string
 };
 
 export default NavLink;

@@ -21,10 +21,13 @@ const Oops = (props, context) => (
           {' '}
           <a
             href="/"
-            onClick={(e) => {
-              e.preventDefault();
-              context.router.history.goBack();
-            }}
+            onClick={
+              /* istanbul ignore next */
+              (e) => {
+                e.preventDefault();
+                context.router.history.goBack();
+              }
+            }
           >
             previous page
           </a>

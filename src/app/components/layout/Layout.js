@@ -16,6 +16,7 @@ import './layout.scss';
 */
 class Layout extends Component {
   componentDidUpdate(prevProps) {
+    /* istanbul ignore next - can't really test this since it requires an actual route change? */
     if (this.props.location !== prevProps.location) {
       window.scrollTo(0, 0);
     }
