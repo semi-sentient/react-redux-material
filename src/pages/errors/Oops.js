@@ -11,7 +11,9 @@ const Oops = (props, context) => (
 
       <h3>Sorry, we couldn’t find the information or page you requested. There may have been a system error.</h3>
 
-      <p><strong>Things to try:</strong></p>
+      <p>
+        <strong>Things to try:</strong>
+      </p>
 
       <ul>
         <li>

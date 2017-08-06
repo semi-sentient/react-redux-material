@@ -1,17 +1,16 @@
 import Header from './Header';
 
-describe('<Header />', () => {
+describe('app/components/layout/header/Header', () => {
   const wrapper = shallow(<Header />);
 
-  it('should render a <header>', () => {
+  it('should render a <header> element', () => {
     expect(wrapper.type()).to.equal('header');
   });
 
-  it('should render a single <nav>', () => {
-    expect(wrapper.find('nav')).to.have.length(1);
-  });
+  it('should render a <nav> element with two <NavLink> components', () => {
+    const nav = wrapper.find('nav');
 
-  it('should render a single <IndexLink> that links to "/"', () => {
-    expect(wrapper.find('IndexLink[to="/"]')).to.have.length(1);
+    expect(nav.length).to.equal(1);
+    expect(nav.find('NavLink').length).to.equal(2);
   });
 });

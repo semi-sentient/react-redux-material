@@ -38,4 +38,5 @@ class Layout extends Component {
   }
 }
 
+export { Layout }; // exposes to test environment
 export default withRouter(Layout);
