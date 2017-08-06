@@ -36,10 +36,10 @@ const NavLink = ({
     className = to === location ? `${baseClass} active-nav` : baseClass;
   }
 
-  /* istanbul ignore next */
   const commonProps = {
     className: isDisabled ? 'disabled' : '',
     onClick: (e) => {
+      /* istanbul ignore next -- no way to test/verify this so ignoring branch */
       if (isDisabled) {
         e.preventDefault();
       }

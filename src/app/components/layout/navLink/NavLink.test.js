@@ -43,10 +43,6 @@ describe('app/components/layout/navLink/NavLink', () => {
     // expects match on links containing "/test" ("/test", "/test/123", etc)
     const wrapper = shallow(<NavLink to={matchingLink} title={title} />, { context: testContext });
     expect(wrapper.hasClass('active-nav')).to.be.true;
-
-    /*wrapper.find('Link').simulate('click', {
-      preventDefault() {}
-    });*/
   });
 
   it('should not contain "active-nav" class name when default link ("/") does not exactly match current route', () => {
@@ -73,4 +69,15 @@ describe('app/components/layout/navLink/NavLink', () => {
     const wrapper = shallow(<NavLink href="//www.google.com" target="_blank" title={title} />, { context: defaultContext });
     expect(wrapper.find('a').length).to.equal(1);
   });
+
+  it('should call onClick handler when <Link> item is clicked', () => {
+    const mockOnClick = sinon.spy();
+    const wrapper = shallow(<NavLink to={defaultLink} title={title} onClick={mockOnClick} />, { context: defaultContext });
+
+    wrapper.find('Link').simulate('click');
+
+    expect(mockOnClick.calledOnce).to.be.true;
+  });
+
+  // TODO test passing on onClick and spy on whether or not it was called
 });
