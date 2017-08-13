@@ -1,9 +1,8 @@
-@import '../mixins.scss';
-
-$footer-height: 30px;
+@import '~app/styles/mixins';
+@import '~app/styles/variables';
 
 #footer {
-  @include navbar;
+  @include navbar-mixin;
 
   height: $footer-height;
   line-height: $footer-height;

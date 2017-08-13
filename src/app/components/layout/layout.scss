@@ -1,20 +1,28 @@
-@import '../../styles/colors';
-@import '../../styles/typography';
-@import '../../styles/utilities';
+@import '~app/styles/colors';
+@import '~app/styles/typography';
+@import '~app/styles/utilities';
+@import '~app/styles/variables';
+
+html {
+  line-height: 1.55;
+}
 
 html, body, #root, #layout, #main {
-  height: 100%;
   margin: 0;
   background: $primary-container-bg-color;
 }
 
 #layout {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 #main {
-  .content {
+  display: flex;
+  flex: 1;
+
+  > div {
     display: flex;
     flex: 1;
 
@@ -22,41 +30,34 @@ html, body, #root, #layout, #main {
       flex: 1;
     }
 
-    nav, aside {
-      flex: 0 0 14em;
+    article, aside, nav {
+      flex: 0 0 16em;
     }
 
     nav {
       order: -1;
     }
 
-    main, nav, aside {
+    article, aside, main, nav {
       padding: 0.75em;
     }
   }
 }
 
-/* Too narrow to support three columns */
-@media all and (max-width: 640px) {
+@media all and (max-width: $breakpoint-ipad) {
+  #layout {
+    min-height: unset;
+  }
+
   #main {
-    .content {
+    flex-direction: column;
+
+    > div {
       flex-direction: column;
-    }
 
-    .content > article,
-    .content > nav,
-    .content > aside {
-      /* Return them to document order */
-      order: 0;
-    }
-
-    .content > article,
-    .content > nav,
-    .content > aside,
-    header,
-    footer {
-      min-height: 50px;
-      max-height: 50px;
+      article, aside, nav {
+        order: 0; // Return them to document order
+      }
     }
   }
 }

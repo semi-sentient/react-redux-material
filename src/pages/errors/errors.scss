@@ -1,6 +1,8 @@
+@import '~app/styles/variables';
+
 #errors {
   h3 {
-    line-height: 1.6em;
-    margin: 1em 0;
+    line-height: $base-block * 1.6;
+    margin: $base-block 0;
   }
 }

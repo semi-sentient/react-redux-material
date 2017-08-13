@@ -1,11 +1,8 @@
 @import './colors';
+@import './variables';
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
-$font-size-huge: 24px;
-$font-size-large: 20px;
-$font-size-normal: 16px;
-$font-size-small: 12px;
 
 body {
   font-family: 'Roboto', 'Noto Sans', sans-serif;
@@ -14,8 +11,8 @@ body {
 // set default font size for most common elements in main content area
 // TODO: need to get a complete list of common elements
 // TODO: https://developers.google.com/speed/docs/insights/UseLegibleFontSizes
-.content {
-  p, div, span, a, strong, em, li {
+#main {
+  p, div, span, a, li {
     font-size: $font-size-normal;
   }
 

@@ -1,7 +1,7 @@
-@import '../mixins.scss';
+@import '~app/styles/mixins';
 
 #header {
-  @include navbar;
+  @include navbar-mixin;
 
   display: flex;
   align-items: center;

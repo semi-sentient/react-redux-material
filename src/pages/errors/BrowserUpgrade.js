@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './errors.scss';
+
 const BrowserUpgrade = () => (
-  <div className="content" id="errors">
+  <div id="errors">
     <main>
       <h1>For security reasons, please update your web browser.</h1>
 

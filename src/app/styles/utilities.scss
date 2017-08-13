@@ -1,8 +1,66 @@
-$base-block: 1em;
+@import './variables';
 
-.block-1x {
-  margin-top: $base-block;
-}
-.block-2x {
-  margin-top: $base-block * 2;
-}
+/*** MARGIN ***/
+  .block {
+    margin-top: $base-block;
+    display: block;
+  }
+
+  .block-1x {
+    margin-top: $base-block;
+  }
+
+  .block-2x {
+    margin-top: $base-block * 2;
+  }
+
+  .block-1x-left {
+    margin-left: $base-block;
+  }
+
+  .block-1x-right {
+    margin-right: $base-block;
+  }
+
+  .no-margin {
+    margin: 0;
+  }
+
+  .no-margin-top {
+    margin-top: 0;
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+/*** PADDING ***/
+  .pad-1x {
+    padding: $base-block;
+  }
+
+  .pad-2x {
+    padding: $base-block * 2;
+  }
+
+/*** GENERAL ***/
+  .auto-width {
+    width: auto !important;
+  }
+
+  .button-group {
+    margin-top: $base-block * 2;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .required {
+    color: $error-darker-color;
+  }
+
+/*** MATERIAL-UI COMPONENTS ***/
+  .paper {
+    padding: $base-block;
+  }

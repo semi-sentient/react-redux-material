@@ -22,10 +22,8 @@ describe('app/components/layout/navLink/NavLink', () => {
 
   const defaultLink = '/';
   const matchingLink = '/test';
-  const nonMatchingLink = '/blah';
+  const nonMatchingLink = '/broken';
   const title = 'My Link';
-
-  // className = to === location ? `${baseClass} active-nav` : baseClass;
 
   it('should render a <span> containing a single <Link> component', () => {
     const wrapper = shallow(<NavLink to={defaultLink} title={title} />, { context: defaultContext });

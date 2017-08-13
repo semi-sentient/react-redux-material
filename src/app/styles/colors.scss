@@ -1,45 +1,105 @@
-// Uses Material Design color palette: https://material.io/guidelines/style/color.html#color-color-palette
+// Refer to Material Design color palette when modifying theme: http://www.material-ui.com/#/customization/colors
+// Note that app/components/layout/Layout.js contains theming for Material-UI components
 
-// e.g. body background color, cards, etc.
-$primary-container-bg-color: white;
+/************************/
+/*** START SITE THEME ***/
+/************************/
+  // e.g. body background color.
+  // $primary-container-bg-color: #FFF8E1;   // Amber, 50
+  // $primary-container-bg-color: #E3F2FD;   // Blue, 50
+  $primary-container-bg-color: #ECEFF1;   // Blue Grey, 50
+  // $primary-container-bg-color: #EFEBE9;   // Brown, 50
+  // $primary-container-bg-color: #EDE7F6;   // Deep Purple, 50
+  // $primary-container-bg-color: #E8F5E9;   // Green, 50
+  // $primary-container-bg-color: #E8EAF6;   // Indigo, 50
+  // $primary-container-bg-color: #FCE4EC;   // Pink, 50
+  // $primary-container-bg-color: #F3E5F5;   // Purple, 50
+  // $primary-container-bg-color: #FFEBEE;   // Red, 50
+  // $primary-container-bg-color: #E0F2F1;   // Teal, 50
 
-// e.g. asides, cards, etc.
-$secondary-container-bg-color: #ECEFF1; // Blue Grey, 50
+  // e.g. header/footer colors
+  // $primary-brand-color: #FF6F00;          // Amber, 900
+  // $secondary-brand-color: #FFA000;        // Amber, 700
+  // $primary-brand-color: #0D47A1;          // Blue, 900
+  // $secondary-brand-color: #1976D2;        // Blue, 700
+  $primary-brand-color: #263238;          // Blue Grey, 900
+  $secondary-brand-color: #455A64;        // Blue Grey, 700
+  // $primary-brand-color: #3E2723;          // Brown, 900
+  // $secondary-brand-color: #5D4037;        // Brown, 700
+  // $primary-brand-color: #311B92;          // Deep Purple, 900
+  // $secondary-brand-color: #512DA8;        // Deep Purple, 700
+  // $primary-brand-color: #1B5E20;          // Green, 900
+  // $secondary-brand-color: #388E3C;        // Green, 700
+  // $primary-brand-color: #1A237E;          // Indigo, 900
+  // $secondary-brand-color: #303F9F;        // Indigo, 700
+  // $primary-brand-color: #880E4F;          // Pink, 900
+  // $secondary-brand-color: #C2185B;        // Pink, 700
+  // $primary-brand-color: #4A148C;          // Purple, 900
+  // $secondary-brand-color: #7B1FA2;        // Purple, 700
+  // $primary-brand-color: #B71C1C;          // Red, 900
+  // $secondary-brand-color: #D32F2F;        // Red, 700
+  // $primary-brand-color: #004D40;          // Teal, 900
+  // $secondary-brand-color: #00796B;        // Teal, 700
 
-// e.g. header/footer colors
-$primary-brand-color: #263238;    // Blue Grey, 900
-$secondary-brand-color: #455A64;  // Blue Grey, 700
+  // e.g. main, aside, nav links
+  // $link-color-main: #FFC107;              // Amber, 500
+  // $link-color-main-shadow: #FFECB3;       // Amber, 100
+  // $link-color-main: #3F51B5;              // Blue, 500
+  // $link-color-main-shadow: #BBDEFB;       // Blue, 100
+  $link-color-main: #607D8B;              // Blue Grey, 500
+  $link-color-main-shadow: #CFD8DC;       // Blue Grey, 100
+  // $link-color-main: #795548;              // Brown, 500
+  // $link-color-main-shadow: #D7CCC8;       // Brown, 100
+  // $link-color-main: #673AB7;              // Deep Purple, 500
+  // $link-color-main-shadow: #D1C4E9;       // Deep Purple, 100
+  // $link-color-main: #4CAF50;              // Green, 500
+  // $link-color-main-shadow: #C8E6C9;       // Green, 100
+  // $link-color-main: #3F51B5;              // Indigo, 500
+  // $link-color-main-shadow: #C5CAE9;       // Indigo, 100
+  // $link-color-main: #E91E63;              // Pink, 500
+  // $link-color-main-shadow: #F8BBD0;       // Pink, 100
+  // $link-color-main: #9C27B0;              // Purple, 500
+  // $link-color-main-shadow: #E1BEE7;       // Purple, 100
+  // $link-color-main: #F44336;              // Red, 500
+  // $link-color-main-shadow: #FFCDD2;       // Red, 100
+  // $link-color-main: #009688;              // Teal, 500
+  // $link-color-main-shadow: #B2DFDB;       // Teal, 100
 
-// e.g. header/footer links and text
-$navbar-text-color: white;
-$navbar-text-color-shadow: black;
-$navbar-link-color: #ccc;
-$navbar-link-active-color: white;
+  // e.g. header/footer links and text
+  $navbar-text-color: white;
+  $navbar-text-color-shadow: black;
+  $navbar-link-color: $primary-container-bg-color;
+  $navbar-link-active-color: white;
+/**********************/
+/*** END SITE THEME ***/
+/**********************/
 
-// e.g. main, aside, nav links
-$link-color-main: #607D8B;        // Blue Grey, 500
-$link-color-main-shadow: #CFD8DC; // Blue Grey, 100
+/***********************/
+/*** START MESSAGING ***/
+/***********************/
+  // info (Blue Grey)
+  $info-light-color: #CFD8DC;       // 100
+  $info-medium-color: #546E7A;      // 600
+  $info-dark-color: #37474F;        // 800
+  $info-darker-color: #263238;      // 900
 
-// messaging - info (Blue Grey)
-$info-light-color: #CFD8DC;       // 100
-$info-medium-color: #546E7A;      // 600
-$info-dark-color: #37474F;        // 800
-$info-darker-color: #263238;      // 900
+  // success (Light Green)
+  $success-light-color: #DCEDC8;    // 100
+  $success-medium-color: #7CB342;   // 600
+  $success-dark-color: #558B2F;     // 800
+  $success-darker-color: #33691E;   // 900
 
-// messaging - success (Light Green)
-$success-light-color: #DCEDC8;    // 100
-$success-medium-color: #7CB342;   // 600
-$success-dark-color: #558B2F;     // 800
-$success-darker-color: #33691E;   // 900
+  // warning (Amber)
+  $warning-light-color: #FFECB3;    // 100
+  $warning-medium-color: #FFB300;   // 600
+  $warning-dark-color: #FF8F00;     // 800
+  $warning-darker-color: #FF6F00;   // 900
 
-// messaging - warning (Amber)
-$warning-light-color: #FFECB3;    // 100
-$warning-medium-color: #FFB300;   // 600
-$warning-dark-color: #FF8F00;     // 800
-$warning-darker-color: #FF6F00;   // 900
-
-// messaging - error (Red)
-$error-light-color: #FFCDD2;      // 100
-$error-medium-color: #E53935;     // 600
-$error-dark-color: #C62828;       // 800
-$error-darker-color: #B71C1C;     // 900
+  // error (Red)
+  $error-light-color: #FFCDD2;      // 100
+  $error-medium-color: #E53935;     // 600
+  $error-dark-color: #C62828;       // 800
+  $error-darker-color: #B71C1C;     // 900
+/*********************/
+/*** END MESSAGING ***/
+/*********************/

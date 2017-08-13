@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import { routes } from 'app/config/routes';
 import './errors.scss';
 
-const Oops = (props, context) => (
-  <div className="content" id="errors">
+const PageNotFound = (props, context) => (
+  <div id="errors">
     <main>
       <h1>Oops! Something Happened</h1>
 
@@ -36,15 +37,15 @@ const Oops = (props, context) => (
         </li>
 
         <li>
-          Or if you like... just return to the <Link to="/">home page</Link>.
+          Or if you like... just return to the <Link to={routes.home.path}>home page</Link>.
         </li>
       </ul>
     </main>
   </div>
 );
 
-Oops.contextTypes = {
+PageNotFound.contextTypes = {
   router: PropTypes.object
 };
 
-export default Oops;
+export default PageNotFound;

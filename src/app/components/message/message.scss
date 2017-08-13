@@ -1,5 +1,5 @@
-@import '../../styles/colors';
-@import '../../styles/typography';
+@import '~app/styles/colors';
+@import '~app/styles/typography';
 
 @mixin messageColors($bg, $icon, $close, $text) {
   background: $bg;

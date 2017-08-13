@@ -54,8 +54,7 @@ class Message extends Component {
     }
 
     return (
-      <div
-        className={`message ${type}`}>
+      <div className={`message ${type}`}>
         {isControl ? (
           <div
             className="close"

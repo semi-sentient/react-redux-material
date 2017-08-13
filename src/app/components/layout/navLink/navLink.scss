@@ -1,26 +1,23 @@
-@import '../../../styles/colors';
-
-@mixin highlight {
-    background: $secondary-brand-color;
-
-    a {
-        color: $navbar-link-active-color;
-        text-decoration: none;
-    }
-}
+@import '~app/styles/colors';
+@import '~app/styles/mixins';
 
 #nav {
   .nav-item {
     padding: 1em;
+
     cursor: pointer;
     display: inline-block;
 
+    a {
+      outline: 0;
+    }
+
     &:hover {
-        @include highlight;
+        @include nav-highlighted-mixin;
     }
   }
 
   .active-nav {
-    @include highlight;
+    @include nav-highlighted-mixin;
   }
 }
