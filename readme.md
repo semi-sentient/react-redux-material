@@ -22,9 +22,9 @@
 
 1. [Mocha](https://mochajs.org/) *(test runner)*
 2. [Chai](http://chaijs.com/) + [Chai As Promised](https://github.com/domenic/chai-as-promised) *(assertion library)*
-3. [Sinon](http://sinonjs.org/) *(mock/stub library)*
-4. [JSDOM](https://github.com/tmpvar/jsdom) *(JS-based headless browser)*
-5. [Enzyme](https://github.com/airbnb/enzyme) *(wrapper for React testing utility)*
+3. [Enzyme](https://github.com/airbnb/enzyme) *(wrapper for React testing utility)*
+4. [Sinon](http://sinonjs.org/) *(mock/stub library)*
+5. [JSDOM](https://github.com/tmpvar/jsdom) *(JS-based headless browser)*
 6. [Redux Mock Store](https://github.com/arnaudbenard/redux-mock-store) *(redux-mock-store, for testing redux async action creators and middleware)*
 7. [Instanbul](https://github.com/gotwarlost/istanbul) *(nicely formatted code coverage reports)*
 
@@ -61,7 +61,7 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
 
 ## Best Practices
 
-1. Use the latest version of ECMAScript (ES). Since this project uses the **latest** preset, that means you can make use of all version <= ES2017.
+1. Since this project uses the **latest** preset, that means you can make use of the current version of ECMAScript.
 2. Avoid control structures and overly indented code where possible as this introduces complexity. Instead opt for built-in Array *(forEach, map, filter, reduce, etc)* and Object *(for..in, assign, entries, keys, etc)* methods.
 3. Write pure functions unless there is a specific reason not to. As a quick refresher, pure functions do not produce side effects *(manipulate parent scope or arguments passed in, async calls)* and are much easier to test in general as they are predictable. Pure functions should always return a value and never mutate the data passed in.
 4. Unit tests should follow "AAA" pattern when possible. This means that setup (props, context, refs, etc.) should be set up at the top of the describe() block so that the it() blocks are kept as lightweight as possible so that they focus on assertions. More on that here: http://www.agile-code.com/blog/the-anatomy-of-a-unit-test/
@@ -82,14 +82,14 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
         - home/
           - store/
             - actions.js
-            - actions.spec.js
+            - actions.test.js
             - reducers.js
-            - reducers.spec.js
+            - reducers.test.js
             - types.js
           - components/ ... (child components, presentational)
           - home.scss
           - Home.js
-          - Home.spec.js
+          - Home.test.js
           - HomeContainer.js (Redux connected component)
     ~~~
 6. Separate components by concern (Presentational vs Container components). More on that here:
@@ -113,5 +113,6 @@ Node is required to build the project, run unit tests, etc., so ensure that you 
 
 ## TODO
 
-1. Increase code coverage (LocalStorage, etc)
+1. Increase code coverage (LocalStorage, Demo Pages, etc)
 2. Build form demo + filtered table
+3. https://pages.github.com/
