@@ -116,12 +116,21 @@ const config = {
     })
   ],
 
-  resolve: {
-    modules: [
-      paths.node,
-      paths.src
-    ]
-  }
+    /**
+     * Allows us to resolve imports using the module path given various roots (node, src) instead of relative paths, e.g.:
+     *      import Module from 'app/pages/module';
+     *      import '~app/styles/colors.less';
+     * Instead of...
+     *      import Module from '../../src/app/pages/module';
+     *      import '../../../app/styles/colors.less';
+     */
+    resolve: {
+      extensions: ['.js', '.jsx', '.scss'],
+      modules: [
+        paths.node,
+        paths.src
+      ]
+    }
 };
 
 module.exports = config;
