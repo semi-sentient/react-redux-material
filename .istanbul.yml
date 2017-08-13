@@ -1,0 +1,7 @@
+instrumentation:
+  excludes: ['*.test.js']
+  extensions: ['.js', '.jsx']
+reporting:
+  reports:
+    - lcov
+    - cobertura
