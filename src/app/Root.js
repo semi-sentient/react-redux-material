@@ -9,12 +9,7 @@ import {
 } from 'react-router-dom';
 
 import Layout from './components/layout/Layout';
-
-import Welcome from 'pages/welcome/Welcome';
-import Forms from 'pages/forms/Forms';
-import AccessDenied from 'pages/errors/AccessDenied';
-import BrowserUpgrade from 'pages/errors/BrowserUpgrade';
-import Oops from 'pages/errors/Oops';
+import { routes } from './config/routes';
 
 // This is required for touch/tap events to function properly with Material UI
 injectTapEventPlugin();
@@ -26,11 +21,9 @@ const Root = ({
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/forms" component={Forms} />
-          <Route path="/access-denied" component={AccessDenied} />
-          <Route path="/browser-upgrade" component={BrowserUpgrade} />
-          <Route component={Oops} />
+          {Object.keys(routes).map((key, index) => (
+            <Route {...routes[key]} key={index} />
+          ))}
         </Switch>
       </Layout>
     </Router>

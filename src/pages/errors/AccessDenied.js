@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+
+import { routes } from 'app/config/routes';
+import './errors.scss';
 
 const AccessDenied = () => (
-  <div className="content" id="errors">
+  <div id="errors">
     <main>
       <h1>Access Denied</h1>
 
@@ -13,7 +16,7 @@ const AccessDenied = () => (
       <ul>
         <li>Ensure your account has the correct permissions.</li>
         <li>Check the URL for errors, then hit the refresh button on your browser.</li>
-        <li>Return to the <Link to="/">home page</Link>.</li>
+        <li>Return to the <Link to={routes.home.path}>home page</Link>.</li>
       </ul>
     </main>
   </div>

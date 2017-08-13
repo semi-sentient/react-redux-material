@@ -7,10 +7,10 @@ describe('app/components/layout/header/Header', () => {
     expect(wrapper.type()).to.equal('header');
   });
 
-  it('should render a <nav> element with two <NavLink> components', () => {
+  it('should render a <nav> element with a single <NavLink> component', () => {
     const nav = wrapper.find('nav');
 
     expect(nav.length).to.equal(1);
-    expect(nav.find('NavLink').length).to.equal(2);
+    expect(nav.find('NavLink').length).to.equal(1);
   });
 });

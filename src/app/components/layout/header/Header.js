@@ -1,6 +1,7 @@
 import React from 'react';
 import NavLink from '../navLink/NavLink';
 
+import { routes } from 'app/config/routes';
 import './header.scss';
 
 /**
@@ -13,8 +14,11 @@ const Header = () => (
     <h2>Site Name</h2>
 
     <nav id="nav">
-      <NavLink to="/" title="Welcome" />
-      <NavLink to="/forms" title="Forms Demo" />
+      {Object.keys(routes).filter(key => routes[key].isNavItem).map((key, index) => {
+        const route = routes[key];
+
+        return <NavLink to={route.path} title={route.title} key={index} />
+      })}
     </nav>
   </header>
 );
