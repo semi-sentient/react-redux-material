@@ -1,2 +1,2 @@
-**/*.spec.js
-test/*.js
+**/*.test.js
+test.config.js
